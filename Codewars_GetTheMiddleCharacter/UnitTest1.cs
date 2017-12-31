@@ -46,6 +46,12 @@ namespace Codewars_GetTheMiddleCharacter
         {
             Assert.AreEqual("BC",Kata.GetMiddle("ABCC"));
         }
+
+        [TestMethod]
+        public void Input_ABZzCC_Should_Be_Zz()
+        {
+            Assert.AreEqual("Zz", Kata.GetMiddle("ABZzCC"));
+        }
     }
 
     public class Kata
