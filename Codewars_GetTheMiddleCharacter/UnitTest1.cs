@@ -59,14 +59,9 @@ namespace Codewars_GetTheMiddleCharacter
         public static string GetMiddle(string str)
         {
             if (str.Length < 2) return str;
-            if (str.Length % 2 == 1)
-            {
-                return str.Substring(str.Length / 2, 1);
-            }
-            else
-            {
-                return str.Substring(str.Length / 2 - 1, 2);
-            }
+            return str.Length % 2 == 1 ? 
+                str.Substring(str.Length / 2, 1) :
+                str.Substring(str.Length / 2 - 1, 2);
         }
     }
 }
