@@ -23,7 +23,23 @@ namespace Codewars_GetTheMiddleCharacter
             Assert.AreEqual("B", Kata.GetMiddle("ABC"));
         }
 
+        [TestMethod]
+        public void Input_CBBAC_Should_Be_B()
+        {
+            Assert.AreEqual("B", Kata.GetMiddle("CBBAC"));
+        }
 
+        [TestMethod]
+        public void Input_ZPOOSSS_Should_Be_O()
+        {
+            Assert.AreEqual("O", Kata.GetMiddle("ZPOOSSS"));
+        }
+
+        [TestMethod]
+        public void Input_AB_Should_Be_AB()
+        {
+            Assert.AreEqual("AB",Kata.GetMiddle("AB"));
+        }
     }
 
     public class Kata
@@ -31,7 +47,15 @@ namespace Codewars_GetTheMiddleCharacter
         public static string GetMiddle(string str)
         {
             if (str.Length < 2) return str;
-            return str.Substring(str.Length / 2, 1);
+            if (str.Length % 2 == 1)
+            {
+                return str.Substring(str.Length / 2, 1);
+            }
+            else
+            {
+                return str.Substring(str.Length / 2 - 1, 2);
+            }
+            
         }
     }
 }
