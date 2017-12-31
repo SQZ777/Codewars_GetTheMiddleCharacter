@@ -23,7 +23,7 @@ namespace Codewars_GetTheMiddleCharacter
     {
         public static string GetMiddle(string str)
         {
-            return string.Empty;
+            return str;
         }
     }
 }
