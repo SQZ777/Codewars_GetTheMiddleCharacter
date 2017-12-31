@@ -14,13 +14,13 @@ namespace Codewars_GetTheMiddleCharacter
         [TestMethod]
         public void Input_A_Should_Be_A()
         {
-            Assert.AreEqual("A",Kata.GetMiddle("A"));
+            Assert.AreEqual("A", Kata.GetMiddle("A"));
         }
 
         [TestMethod]
         public void Input_ABC_Should_Be_B()
         {
-            Assert.AreEqual("B",Kata.GetMiddle("ABC"));
+            Assert.AreEqual("B", Kata.GetMiddle("ABC"));
         }
 
 
@@ -30,7 +30,8 @@ namespace Codewars_GetTheMiddleCharacter
     {
         public static string GetMiddle(string str)
         {
-            return str;
+            if (str.Length < 2) return str;
+            return str.Substring(str.Length / 2, 1);
         }
     }
 }
