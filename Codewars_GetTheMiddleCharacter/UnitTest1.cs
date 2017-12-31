@@ -10,13 +10,20 @@ namespace Codewars_GetTheMiddleCharacter
         {
             Assert.AreEqual(string.Empty, Kata.GetMiddle(string.Empty));
         }
+
+        [TestMethod]
+        public void Input_A_Should_Be_A()
+        {
+            Assert.AreEqual("A",Kata.GetMiddle("A"));
+        }
+
     }
 
     public class Kata
     {
         public static string GetMiddle(string str)
         {
-            throw new System.NotImplementedException();
+            return string.Empty;
         }
     }
 }
