@@ -6,8 +6,17 @@ namespace Codewars_GetTheMiddleCharacter
     public class UnitTest1
     {
         [TestMethod]
-        public void TestMethod1()
+        public void Input_stringEmpty_Should_Be_stringEmpty()
         {
+            Assert.AreEqual(string.Empty, Kata.GetMiddle(string.Empty));
+        }
+    }
+
+    public class Kata
+    {
+        public static string GetMiddle(string str)
+        {
+            throw new System.NotImplementedException();
         }
     }
 }
